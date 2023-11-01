@@ -9,12 +9,12 @@ Open a terminal in the project folder and enter the following commands:
 python create_tables.py
 etl.py
 
-## Project files
+## Project files:
 create_table.py is where the  fact and dimension tables for the star schema in Redshift are created.
 etl.py is where the data from S3 is loaded into the staging tables on Redshift and then processed into the analytics tables on Redshift.
 sql_queries.py is where the SQL statements are defined, which will be imported into the two other files above.
 
-## Database schema design
+## Database schema design:
 staging_events - This is an exact copy of the original json data.
 artist VARCHAR,
 auth VARCHAR,
@@ -88,7 +88,7 @@ month INTEGER,
 year INTEGER,
 weekday VARCHAR
 
-## ETL pipeline
+## ETL pipeline:
 1. Extract data from the S3 bucket.
 2. Load data to the staging tables.
 3. Transform the data to create the fact table and dimension tables.
